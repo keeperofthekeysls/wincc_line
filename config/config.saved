@@ -1,0 +1,11 @@
+[general]
+pvss_path = "C:/Program Files/Siemens/WinCC_OA/3.21"
+proj_path = "C:/Users/azare/OneDrive/Документы/wincc_proj/sbs/sbs"
+proj_version = "3.21"
+langs = "en_US.utf8"
+langs = "de_AT.utf8"
+langs = "ru_RU.utf8"
+lang = "auto"
+
+useNGA = 1
+useSQLite = 1
