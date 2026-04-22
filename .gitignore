@@ -1,6 +1,71 @@
-bin
-db
-log
-cache
-colorDB/.colorDB.lock
-panels/**/*.ba?
+# -----------------------------
+# WinCC OA / general temp files
+# -----------------------------
+*.log
+*.LOG
+*.bak
+*.BAK
+*.tmp
+*.TMP
+*.temp
+*.orig
+*.autosave
+*.sav
+*.old
+
+# -----------------------------
+# OS / editor noise
+# -----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+
+# -----------------------------
+# Python / script cache
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+
+# -----------------------------
+# Build / cache / temp folders
+# -----------------------------
+cache/
+Cache/
+temp/
+Temp/
+tmp/
+Tmp/
+log/
+logs/
+Log/
+Logs/
+
+# -----------------------------
+# Archive / dump / export junk
+# -----------------------------
+*.zip
+*.7z
+*.rar
+*.dmp
+
+# -----------------------------
+# Merge leftovers
+# -----------------------------
+*.rej
+
+# -----------------------------
+# Windows shortcuts
+# -----------------------------
+*.lnk
+
+# -----------------------------
+# Local user-specific settings
+# -----------------------------
+*.local
+*.user
+*.usersettings
