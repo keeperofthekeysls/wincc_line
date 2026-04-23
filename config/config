@@ -1,13 +1,13 @@
 [general]
 pvss_path = "C:/Program Files/Siemens/WinCC_OA/3.21"
-proj_path = "C:/Users/azare/OneDrive/Документы/wincc_proj/sbs/sbs"
+proj_path = "C:/Users/User/Documents/project_sim/sbs/wincc_line"
 proj_version = "3.21"
 useNGA = 1
 useSQLite = 1
 langs = "ru_RU.utf8"
 [ui]
 defaultFont = "Noto Sans"
-httpServer = "https://HomePC:443"
+httpServer = "https://localhost:443"
 versionControl = "git"
 versionControlDiff = "C:/Program Files/Git/mingw64/libexec/git-core/git.exe"
 [webClient]
