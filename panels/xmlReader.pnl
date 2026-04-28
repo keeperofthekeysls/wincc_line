@@ -1,0 +1,73 @@
+V 14
+1
+LANG:10027 0 
+PANEL,-1 -1 728 400 N "_3DFace" 0
+E E E E E 1 -1 -1 0  80 140
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "108.888"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+13 1
+"PUSH_BUTTON1"
+""
+1 80 146.2068965517242 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+0 0 0 0 0 0
+E E E
+8
+1
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+1
+LANG:10027 43 Noto Sans,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+0  78 134 292 212
+
+T 
+1
+LANG:10027 12 PUSH_BUTTON1
+"#uses \"CtrlXml\"
+main(mapping event)
+{
+  int id;
+  string fileName = \"c:/d/project.scl\";
+  string errMsg;
+  DebugN(\"File opened\");
+  int errLine, errColumn;
+  id = xmlDocumentFromFile(fileName,errMsg,errLine, errColumn);
+  DebugN(\"id:=\",id);
+  DebugN(xmlFirstChild(fileName));
+  xmlCloseDocument(id);
+}" 0
+ E E E
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+0
+0
