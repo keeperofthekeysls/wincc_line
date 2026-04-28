@@ -1,6 +1,6 @@
 [general]
 pvss_path = "C:/Program Files/Siemens/WinCC_OA/3.21"
-proj_path = "C:/Users/User/Documents/project_sim/sbs/wincc_line"
+proj_path = "C:/Users/azare/OneDrive/Документы/wincc_proj/sbs/sbs"
 proj_version = "3.21"
 useNGA = 1
 useSQLite = 1

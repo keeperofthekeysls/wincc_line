@@ -28,7 +28,7 @@ LANG:10027 0
 1
 "layoutAlignment" "AlignNone"
 1
-LANG:10027 43 Noto Sans,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+LANG:10027 43 Noto Sans,-1,16,5,400,0,0,0,0,0,0,0,0,0,0,1
 0  78 134 292 212
 
 T 
@@ -38,13 +38,42 @@ LANG:10027 12 PUSH_BUTTON1
 main(mapping event)
 {
   int id;
+  unsigned rootNode;
   string fileName = \"c:/d/project.scl\";
   string errMsg;
-  DebugN(\"File opened\");
+  string nodeName;
+
+  unsigned node;
+  dyn_uint childNode;
+  uint cN;
   int errLine, errColumn;
+  //Открытие документа
   id = xmlDocumentFromFile(fileName,errMsg,errLine, errColumn);
-  DebugN(\"id:=\",id);
-  DebugN(xmlFirstChild(fileName));
+  DebugN(\"File opened\");
+
+  //Читаем первый элемент файла
+  //Проверяем на равенство xml, если да то переходим к следующему узлу.
+  rootNode = xmlFirstChild(id);
+  nodeName=xmlNodeName(id, rootNode);
+
+  if (nodeName== \"xml\")
+  {
+    rootNode=xmlNextSibling(id,rootNode);
+    nodeName = xmlNodeName(id,rootNode);
+  }
+
+  //Считываем дочерние ноды.
+  xmlChildNodes(id, rootNode, childNode);
+  DebugN(\"count nodes\",dynlen(childNode));
+
+  for(int i=1; i <=dynlen(childNode); i++)
+  {
+    cN = childNode[i];
+    DebugN(\"node:\", xmlNodeName(id, cN));
+  }
+
+  //DebugN(nodeName);
+
   xmlCloseDocument(id);
 }" 0
  E E E
