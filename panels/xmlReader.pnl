@@ -44,7 +44,7 @@ main(mapping event)
   string nodeName;
 
   unsigned node;
-  dyn_uint childNode;
+  dyn_uint childNode,searchNode;
   uint cN;
   int errLine, errColumn;
   //Открытие документа
@@ -69,12 +69,26 @@ main(mapping event)
   for(int i=1; i <=dynlen(childNode); i++)
   {
     cN = childNode[i];
-    DebugN(\"node:\", xmlNodeName(id, cN));
+    if (xmlNodeName(id,childNode[i]) == \"Substation\")
+    {
+     xmlChildNodes(id, childNode[i], searchNode);
+
+     for (int j=1; j<=dynlen(searchNode);j++)
+     {
+       DebugN(\"searchNode\", xmlNodeName(id,searchNode[j]),j);
+     }
+    }
+    DebugN(\"node:\", xmlNodeName(id, cN), i);
   }
 
   //DebugN(nodeName);
 
   xmlCloseDocument(id);
+}
+
+rekurs (int id, int i, int j)
+{
+
 }" 0
  E E E
 0
